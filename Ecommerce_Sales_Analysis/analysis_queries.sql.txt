@@ -1,0 +1,18 @@
+-- Total orders by each customer
+SELECT c.name, COUNT(o.order_id) AS total_orders
+FROM Customers c
+JOIN Orders o ON c.customer_id = o.customer_id
+GROUP BY c.name;
+
+-- Total revenue generated
+SELECT SUM(p.price * o.quantity) AS total_revenue
+FROM Orders o
+JOIN Products p ON o.product_id = p.product_id;
+
+-- Most sold product
+SELECT p.name, SUM(o.quantity) AS total_sold
+FROM Orders o
+JOIN Products p ON o.product_id = p.product_id
+GROUP BY p.name
+ORDER BY total_sold DESC
+LIMIT 1;

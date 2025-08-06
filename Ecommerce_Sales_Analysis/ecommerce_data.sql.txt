@@ -1,0 +1,15 @@
+-- Inserting sample data
+
+INSERT INTO Customers VALUES
+(1, 'Tejas', 'tejas@example.com'),
+(2, 'Priya', 'priya@example.com');
+
+INSERT INTO Products VALUES
+(101, 'Laptop', 'Electronics', 50000.00),
+(102, 'Mobile', 'Electronics', 20000.00),
+(103, 'Shoes', 'Fashion', 3000.00);
+
+INSERT INTO Orders VALUES
+(1, 1, 101, 1, '2025-07-01'),
+(2, 2, 102, 2, '2025-07-03'),
+(3, 1, 103, 1, '2025-07-05');
